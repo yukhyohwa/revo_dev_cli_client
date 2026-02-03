@@ -1,73 +1,77 @@
-# Rovo Dev CLI 便携包使用指南
+# Rovo Dev CLI Portable Package
 
-这是一套已经配置好的 AI 助手工具包。你可以把它整体复制到任何 Windows 电脑上，让 AI 帮你写代码、改文件、分析逻辑。
+[![GitHub release](https://img.shields.io/github/v/release/yukhyohwa/rovo-dev-cli-client)](https://github.com/yukhyohwa/rovo-dev-cli-client/releases)
+![GitHub license](https://img.shields.io/github/license/yukhyohwa/rovo-dev-cli-client)
+![GitHub issues](https://img.shields.io/github/issues/yukhyohwa/rovo-dev-cli-client)
+![Platform](https://img.shields.io/badge/platform-Windows-0078D4?logo=windows&logoColor=white)
 
----
-
-## 📂 文件夹里的文件都是干嘛的？
-
-* **`acli.exe`**：AI 的“大脑”，所有的命令都靠它执行（不需要安装）。
-* **`1-login.bat`**：**授权登录**。双击它登录你的 Atlassian 账号。如果 `.env` 已配置，会自动登录。
-* **`2-chat.bat`**：**启动对话**。平时双击它，就能弹出一个窗口跟 AI 聊天。
-* **`3-update.bat`**：**更新程序**。如果程序坏了或者想用最新版，双击它会自动下载。
-* **`.env`**：存储你的账号信息（邮箱和 Token），实现免手动输入登录。
-* **`README.md`**：就是你现在看的这份文档。
-
-## 🛠️ 必要环境
-
-为了让 AI 正常工作，你的电脑需要满足以下条件：
-
-1.  **Git**：AI 需要 Git 来管理和分析项目代码。
-    *   **检查方法**：按 `Win + R`，输入 `cmd`，在里面输入 `git --version`。如果报错“不是内部或外部命令”，说明没装。
-    *   **安装方法**：从 [Git 官网](https://git-scm.com/download/win) 下载并安装（一路点“下一步”即可）。
-2.  **网络连接**：需要能正常访问 Atlassian 的服务。
+This is a pre-configured AI assistant toolkit. You can copy it to any Windows computer to allow AI to help you write code, modify files, and analyze logic.
 
 ---
 
-## 🚀 两种使用方式（根据你的习惯选择）
+## 📂 File Explanations
 
-### 方式一：随身携带法（不配置系统，哪用搬哪）
+* **`acli.exe`**: The "brain" of the AI. All commands are executed through this (no installation required).
+* **`1-login.bat`**: **Authorization Login**. Double-click to log in to your Atlassian account. If `.env` is configured, it will log in automatically.
+* **`2-chat.bat`**: **Start Conversation**. Double-click to open a window and chat with the AI.
+* **`3-update.bat`**: **Update Program**. If the program is broken or you want the latest version, double-click to download it automatically.
+* **`.env`**: Stores your account information (email and token) to enable automatic login.
+* **`README.md`**: The document you are currently reading.
 
-这种方式最简单，不需要改电脑设置。
+## 🛠️ Prerequisites
 
-**具体操作：**
+To ensure the AI works correctly, your computer must meet the following requirements:
 
-1. **复制文件**：打开 `revo_dev_cli_client` 文件夹，把里面的 **所有文件**（exe 和 bat 文件）全部选中并复制。
-2. **粘贴到你的项目里**：进入你平时写代码的那个文件夹（比如 `我的网页项目`），直接把文件**粘贴**进去。
-   > **⚠️ 注意**：是把文件夹**里面**的文件放进去，而不是把整个 `revo_dev_cli_client` 文件夹放进去。这样 AI 的运行文件就和你代码文件并排在一起了。
-   >
-3. **开始聊天**：在项目的文件夹里，双击那个 **`2-chat.bat`**。
-4. **结果**：AI 此时就能看到你这个项目里的所有代码了。
-
----
-
-### 方式二：全能指挥官法（配置环境变量，随时随地召唤）
-
-这种方式最专业。配置一次后，AI 就像你的系统插件，在电脑任何地方都能一键召唤。
-
-**具体操作：**
-
-1. **找到路径**：打开 `revo_dev_cli_client` 文件夹，点击最上面的地址栏，右键点击“复制地址”。
-   * *地址大概长这样：`C:\Users\...\revo_dev_cli_client`*
-2. **打开设置**：按键盘上的 `Win` 键（或是点左下角开始菜单），直接输入 **“环境变量”**，点击搜索出来的“编辑系统环境变量”。
-3. **进入配置**：在弹出的窗口里点右下角的 **“环境变量(N)...”** 按钮。
-4. **修改 Path**：在下方的“系统变量”盒子里，找到一行叫 **`Path`** 的文字，双击它。
-5. **添加地址**：
-   * 在新弹出的窗口里点右侧的 **“新建”**。
-   * 把刚才复制的地址**粘贴**进去。
-   * 点击 **“确定”**，然后把之前所有的窗口都点 **“确定”** 关掉。
-6. **如何召唤 AI**：
-   * 去任何你放代码的文件夹。
-   * 在文件夹顶部的地址栏位置输入字符 **`cmd`** 然后按回车。
-   * 在黑窗口里输入命令：**`acli rovodev run`** 然后按回车。
-   * **搞定！** AI 降临，开始帮你干活。
+1.  **Git**: AI requires Git to manage and analyze project code.
+    *   **How to check**: Press `Win + R`, type `cmd`, and enter `git --version`. If it says "is not recognized...", it is not installed.
+    *   **How to install**: Download and install from the [Git Official Website](https://git-scm.com/download/win) (just follow the "Next" buttons).
+2.  **Network Connection**: Requires access to Atlassian services.
 
 ---
 
-## ⚠️ 常见问题
+## 🚀 Two Usage Methods (Choose based on your preference)
 
-* **报错 "Git is not installed or not on your PATH"？**
-  这是因为目标电脑没有安装 Git。请前往 [Git 官网](https://git-scm.com/download/win) 下载安装，或者让管理员帮你装一下。
-* **双击没反应？** 请确保 `acli.exe` 和 `.bat` 文件在同一个位置。
-* **换了台电脑又要登录？** 是的，每台新电脑需要先运行一次 `1-login.bat`。
-* **AI 乱改我文件怎么办？** 默认情况下，AI 每次改代码都会问你“是否允许”。如果你不放心，可以告诉它：“只给我看代码，不要修改我的文件”。
+### Method 1: Portable Method (Take it anywhere)
+
+This is the simplest way and doesn't require changing system settings.
+
+**Steps:**
+
+1. **Copy Files**: Open the `rovo-dev-cli-client` folder, select **all files** inside (`exe` and `bat` files), and copy them.
+2. **Paste into Your Project**: Go to your project folder (e.g., `MyWebProject`) and **paste** the files directly.
+   > **⚠️ Note**: Paste the **files** from inside the folder, not the `rovo-dev-cli-client` folder itself. This way, the AI execution files are in the same directory as your code.
+3. **Start Chatting**: Double-click **`2-chat.bat`** inside your project folder.
+4. **Result**: The AI will now have access to all the code in that project.
+
+---
+
+### Method 2: Commander Method (Environment Variables)
+
+This is the professional way. Once configured, you can call the AI from anywhere in your computer.
+
+**Steps:**
+
+1. **Copy Path**: Open the `rovo-dev-cli-client` folder, click the address bar at the top, and copy the address.
+   * *Example: `C:\Users\...\rovo-dev-cli-client`*
+2. **Open Settings**: Press the `Win` key or click Start, type **"Environment Variables"**, and select "Edit the system environment variables".
+3. **Configure**: Click the **"Environment Variables..."** button in the bottom right.
+4. **Modify Path**: In the "System variables" section, find **`Path`** and double-click it.
+5. **Add Path**:
+   * Click **"New"** in the new window.
+   * **Paste** the address you copied.
+   * Click **"OK"** on all open windows to save.
+6. **How to call AI**:
+   * Go to any folder where you have code.
+   * Type **`cmd`** in the folder's address bar and press Enter.
+   * In the command window, type: **`acli rovodev run`** and press Enter.
+   * **Done!** The AI is ready to work for you.
+
+---
+
+## ⚠️ FAQ
+
+* **Error: "Git is not installed or not on your PATH"?**
+  This means Git is missing. Please download it from the [Git Official Website](https://git-scm.com/download/win) or ask an administrator to install it.
+* **Nothing happens when double-clicked?** Ensure `acli.exe` and `.bat` files are in the same location.
+* **New computer requires login?** Yes, you need to run `1-login.bat` once on each new computer.
+* **What if AI modifies my files incorrectly?** By default, the AI asks for permission before modifying code. If you're concerned, tell it: "Only show me the code, do not modify my files."
